@@ -1,0 +1,19 @@
+package Entities;
+
+public class Account {
+	private Integer number;
+	private String Holder;
+	private Double balance;
+	
+	public Account(int number, String holder, double balance) {
+		this.balance = balance;
+		this.Holder = holder;
+		this.number = number;
+	}
+	
+	public Account() {
+		
+	}
+	
+}
+

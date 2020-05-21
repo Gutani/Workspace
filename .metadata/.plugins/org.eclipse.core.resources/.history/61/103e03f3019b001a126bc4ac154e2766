@@ -1,0 +1,52 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import Entities.Account;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Account account;
+		System.out.println("Enter the accout number: ");
+		int number = sc.nextInt();
+		System.out.println("Enter the account holder:");
+		sc.nextLine();
+		String holder = sc.nextLine();
+		System.out.println("There are any Inicial Deposits? (y/n)");
+		char response = sc.next().charAt(0);
+		if(response == 'y' || response == 'Y') {
+			System.out.println("Enter the inicial value: ");
+			double inicialDeposit = sc.nextDouble();
+			account = new Account(number, holder, inicialDeposit);
+		}else {
+			account = new Account(number, holder);
+		}
+		System.out.println(account);
+		System.out.println("Update Values, Want to Withdraw or Deposit some value? 1-deposit / 2-withdraw");
+		int update = sc.nextInt();
+		switch(update) {
+			case 1:
+				System.out.println("What value do you wnat to deposit?");
+				double value = sc.nextDouble();
+				account.deposit(value);
+				break;
+			case 2:
+				System.out.println("Which value do you want to withdraw?");
+				double withdraw = sc.nextDouble();
+				account.withdraw(withdraw);
+				break;
+			}
+		System.out.println(account);
+		System.out.println("what to update again?");
+		update = sc.nextInt();
+		System.out.println(account);
+	
+		sc.close();
+	}
+
+}
