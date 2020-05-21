@@ -19,9 +19,8 @@ public class Program {
 			altura[i] = sc.nextDouble();
 			
 		}
-		//int i =0; i<altura.length; i++
-		for(double obj : altura) {
-			System.out.println(obj);
+		for(int i =0; i<altura.length; i++) {
+			System.out.println(altura[i]);
 		}
 		
 		sc.close();
