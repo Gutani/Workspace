@@ -30,13 +30,12 @@ public class Program {
 			cadastro[room] = new Register(name, email);	
 		}
 		
-		for(int i=0;i<cadastro.length;i++) {
-			if(cadastro[i] != null) {
-				System.out.println("Room " + ": "+ cadastro[i]);
+		for(int i=0; i<10; i++) {
+			if(cadastro[i]!=null) {
+				System.out.println("Room " + i + ": "+ cadastro[i]);
 				
 			}
 		}
 		sc.close();
 	}
-
 }

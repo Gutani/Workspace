@@ -10,21 +10,17 @@ public class Program {
 
 		System.out.println("Dê o número de pessoas:");
 		int numero = sc.nextInt();
-		
+
 		double[] altura = new double[numero];
-		
-		
+
 		for(int i = 0; i<numero; i++) {
 			System.out.println("Digite a altura da pessoa na posição" + i);
 			altura[i] = sc.nextDouble();
-			
-		}
-		//int i =0; i<altura.length; i++
-		for(double obj : altura) {
-			System.out.println(obj);
 		}
 		
-		sc.close();
-	}
+		for(int i = 0; i<altura.length; i++) 
+			System.out.println(altura[i]);
+		
+		
 
-}
+		sc.close();}}
